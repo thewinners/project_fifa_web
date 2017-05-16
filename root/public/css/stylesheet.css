@@ -1,0 +1,425 @@
+/*=========MAIN-STYLESHEET=========*/
+html
+{
+    font-size: 16px;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+li
+{
+    list-style: none;
+    font-family: 'LMSR';
+}
+li:hover{
+    opacity: 0.8;
+}
+a
+{
+    color: #000000;
+    cursor: auto;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.8;
+}
+p, label, li, a
+{
+    color: #cecece;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+label{
+    margin-right: 10%;
+}
+/*======TOOLS======*/
+.wrapper
+{
+    margin: 0 auto;
+    width: 1024px;
+}
+.column-spaced
+{
+    display: flex;
+    justify-content: space-around;
+}
+.column-spred
+{
+    display: flex;
+    justify-content: space-between;
+}
+.column-center
+{
+    display: flex;
+    justify-content: center;
+}
+.row-alignment-start
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.row-alignment-end
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.row-alignment-center
+{
+    display: flex;
+    align-items: center;
+}
+#NoPermission{
+    text-align: center;
+}
+/*===TITLE'S===*/
+h1,h2,h3,h4,h5,h6,sub
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'LMSR';
+    color: #ffffff;
+}
+h3
+{
+    padding-left: 20px;
+}
+.subtitle
+{
+    font-size: 1.3em;
+}
+/*===FORMS===*/
+form{
+    width: 100%;
+}
+.textarea
+{
+    background-color: #ffffff;
+    border: solid 3px #999999;
+    color: #000000;
+    height: 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 6px;
+}
+label
+{
+    width: 100px;
+    margin-bottom: 10px;
+}
+/*===LOGIN FORM===*/
+header button{
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: 'LMSR';
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 1.0em;
+    height: 45px;
+    padding: 0 20px;
+}
+header button:hover {
+    opacity: 0.8;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 40%;
+    top: 20%;
+    width: 400px; /* Full width */
+    height: 300px; /* Full height */
+}
+.modal-content {
+    padding: 20px 0;
+    background-color: #2b4441;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #000;
+}
+.close {
+    margin-left: 20px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: white;
+    cursor: pointer;
+}
+.loginSubmit{
+    border: none;
+    width: 20%;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+/*===DIV'S===*/
+.page-title
+{
+    border-bottom: solid #000000 2px;
+    width: 1024px;
+    padding: 0 40px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+.navbar
+{
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+}
+.shortnav
+{
+    width: 400px;
+}
+.topnav{
+    font-size: 1.3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.topnav a{
+    margin: 0;
+    padding: 0;
+}
+.group-form
+{
+    display: flex;
+    justify-content: center;
+}
+.digital-clock
+{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Timebomb';
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    margin: 25px auto;
+    border-radius: 25px;
+    padding: 25px 0;
+}
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}
+.removeButton{
+    color: #e21c10
+}
+/*===BUTTONS===*/
+.button
+{
+    color: #FFFFFF;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c5e5c
+}
+.button:hover
+{
+    background-color: #999999;
+}
+.btn
+{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-g
+{
+    background-color: #00ff00;
+}
+.btn-r
+{
+    background-color: #ff0000;
+}
+.btn-b
+{
+    background-color: #0000ff;
+}
+/*===TEXT===*/
+.navbar li
+{
+    font-size: 1.3em;
+}
+.digital-clock p
+{
+    font-size: 2em;
+}
+/*===BACKGROUND===*/
+html
+{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wrapper_page
+{
+    padding: 20px 0;
+    border-radius: 25px;
+    overflow: hidden;
+    color: #ffffff;
+    background: linear-gradient(to bottom right, #2b4441, #608c68);
+}
+footer, .footer
+{
+    border-radius: 25px;
+    background: linear-gradient(to bottom left , #454545, #2c2c2c);
+    margin: 20px;
+    padding: 20px;
+}
+/*======FONTS======*/
+@font-face {
+    font-family: 'LMSR';
+    src: url('../fonts/LMSans10-Regular.eot');
+    src: url('../fonts/LMSans10-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/LMSans10-Regular.woff') format('woff'), url('../fonts/LMSans10-Regular.ttf')
+    format('truetype'), url('../fonts/LMSans10-Regular.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Timebomb';
+    src: url('../fonts/TickingTimebombBB.eot');
+    src: url('../fonts/TickingTimebombBB.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TickingTimebombBB.woff') format('woff'), url('../fonts/TickingTimebombBB.ttf')
+    format('truetype'), url('../fonts/TickingTimebombBB.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+/*======MEDIA-QUERY======*/
+
+
+/*======lijnen van pools======*/
+.ladder
+{
+    width: 100%;
+    height: 800px;
+}
+.final
+{
+    width: 20%;
+}
+.block
+{
+    height: 25%;
+}
+.block2
+{
+    height: 50%;
+}
+.l2
+{
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+}
+.l3
+{
+    border-bottom: solid 2px #000000;
+    border-right: solid 2px #000000;
+}
+.r2
+{
+    border-top: solid 2px #000000;
+    border-left: solid 2px #000000;
+}
+.r3
+{
+    border-bottom: solid 2px #000000;
+    border-left: solid 2px #000000;
+}
+.l5, .r5, .mid9
+{
+    border-bottom: solid 2px #000000;
+}
+#start:hover
+{
+    cursor: pointer;
+}
+/*==Players / Teams / matches Page==*/
+.playerName{
+    width:35%;
+}
+.teamName{
+    width: 20%;
+}
+.goals{
+    width: 10%;
+}
+.winsLossDraws
+{
+    width:40%;
+}
+.winsLossDrawsTeam{
+    width: 35%;
+}
+.points{
+    width: 5%;
+}
+.teamA{
+    width: 35%;
+}
+.score{
+    width: 28%;
+}
+.teamB{
+    width: 10%;
+}
+/*==matches page==*/
+.column-spaced li{
+    color: white;
+}
+/*==Header==*/
+header li{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.topnavul{
+    width: 100%;
+}*/
