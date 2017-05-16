@@ -38,7 +38,10 @@ session_start();
                 {
                     if ($_SESSION["logged"])
                     {
-                        echo "<a href='register.php'><li>Register</li></a>";
+                        if ($_SESSION["rights"] == 2)
+                        {
+                            echo "<a href='register.php'><li>Register</li></a>";
+                        }
                         echo "<a href='../app/login/LoginManager.php'><li>Logout</li></a>";
                     }
                 }

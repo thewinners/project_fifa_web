@@ -3,8 +3,10 @@ include_once ("tamplates/header.php");
 
 if (isset($_SESSION["logged"]))
 {
-    echo
-    "<div class='page-title'>
+    if ($_SESSION["rights"] == 2)
+    {
+        echo
+        "<div class='page-title'>
             <h2>Register</h2>
         </div>
         <div class='wrapper wrapper_page'>
@@ -35,6 +37,16 @@ if (isset($_SESSION["logged"]))
         </form>";
         require_once ("tamplates/footer.php");
         echo "</div>";
+    }
+    else
+    {
+        echo
+        "
+        <div class='wrapper wrapper_page'>
+            <h2 id='NoPermission'> No permission for this area.</h2>
+        </div>
+        ";
+    }
 }
 else
 {

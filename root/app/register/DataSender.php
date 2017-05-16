@@ -30,8 +30,11 @@ class dataSender
         $errorMessage = $this->validator->Validate($this->email, $this->username, $this->password, $this->confirmPassword, $this->studentNumber, $this->dbc);
         if ($errorMessage == false)
         {
+            $hash = md5( rand(0,1000) ); // Generate random 32 character hash and assign it to a local variable.
+            // Example output: f4552671f8909587cf485ea990207f3b
+
             $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO `tbl_users` (`username`, `email`, `password`, `studentnumber`) VALUES ('$this->username', '$this->email', '$hashedPassword', '$this->studentNumber');";
+            $sql = "INSERT INTO `tbl_users` (`username`, `email`, `password`, `studentnumber`, `hash`) VALUES ('$this->username', '$this->email', '$hashedPassword', '$this->studentNumber', '$hash');";
             $this->dbc->query($sql);
         }
         return $errorMessage;

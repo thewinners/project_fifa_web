@@ -6,16 +6,13 @@ include_once (__DIR__."/../app/DatabaseConnector.php");
 include_once ("../app/teams/TeamManager.php");
 
 require_once ("../app/matches/matchesManager.php");
+#require_once ("../app/ajax/ajaxManager.php");
 
 if (isset($_GET["id"]))
 {
     $game_id = $_GET["id"];
 
     $dbc = \App\Connect();
-
-    $sql = "UPDATE `tbl_matches` SET `ongoing`= 'T' WHERE `id` =".$game_id;
-    $dbc->query($sql);
-
     $sql = "SELECT `id`,`team_id_a`, `team_id_b`, `score_team_a`, `score_team_b` FROM `tbl_matches` WHERE `id` = '". $game_id."';";
     $result = $dbc->query($sql)->fetchAll();
 
