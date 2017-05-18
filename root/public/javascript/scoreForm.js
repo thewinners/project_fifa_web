@@ -9,39 +9,47 @@ $(document).ready(function () {
 
     for (var i = 0; i < plusButtons.length; i++)
     {
+        (function () {
+            var temp = i;
+            plusButtons[temp].addEventListener("click", function() {
+                player_id = $(this).parent().attr('player-id');
+                game_time = getTime();
+
+                console.log("dit is i: "+temp+" dit is player id: "+ player_id);
 
 
-        plusButtons[i].addEventListener("click", function() {
-            player_id = $(this).parent().attr('data-id');
-            game_time = getTime();
-
-            $.ajax("../app/ajax/ajaxManager.php", {
-                method: "POST",
-                data: {
-                    "request" : 4,
-                    "id" : game_id,
-                    "player" : player_id
-                }
-            }).done(function (data) {
-                console.log(data);
-                updateScore();
+                $.ajax("../app/ajax/ajaxManager.php", {
+                    method: "POST",
+                    data: {
+                        "request" : 4,
+                        "id" : game_id,
+                        "player" : player_id,
+                        "time": timer
+                    }
+                }).done(function (data) {
+                    updateScore();
+                });
             });
-        });
 
-        minusButtons[i].addEventListener("click",function() {
-            player_id = $(this).parent().attr('data-id');
+            console.log(minusButtons[temp]);
+            minusButtons[temp].addEventListener("click",function() {
+                player_id = $(this).parent().attr('player-id');
 
-            $.ajax("../app/ajax/ajaxManager.php", {
-                method: "POST",
-                data: {
-                    "request" : 5,
-                    "id" : game_id,
-                    "player" : player_id
-                }
-            }).done(function (data) {
-                updateScore();
+                console.log("dit is i: "+temp+" dit is player id: "+ player_id);
+
+                $.ajax("../app/ajax/ajaxManager.php", {
+                    method: "POST",
+                    data: {
+                        "request" : 5,
+                        "id" : game_id,
+                        "player" : player_id,
+                        "time": timer
+                    }
+                }).done(function (data) {
+                    updateScore();
+                });
             });
-        });
+        })();
     }
 });
 
@@ -53,7 +61,7 @@ function updateScore() {
             "id" : game_id
         }
     }).done(function (data) {
-        document.getElementById("score").innerHTML = data;
         console.log(data);
+        document.getElementById("score").innerHTML = data;
     });
 }
