@@ -174,5 +174,16 @@ function theTimer() {
 }
 
 function endGame() {
-
+    $.ajax('../app/ajax/ajaxManager.php',{
+        method: "POST",
+        data: {
+            "request": 9,
+            "id" : game_id
+        }
+    }).done(function (){
+        goBack();
+    });
+}
+function goBack() {
+    window.location.replace("http://www.google.com");
 }

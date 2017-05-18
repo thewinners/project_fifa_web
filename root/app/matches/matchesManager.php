@@ -17,7 +17,7 @@ function getMatches($whichGame, $start)
 
         if ($total != 0)
         {
-            $sql = "SELECT `id`,`team_id_a`, `team_id_b`, `score_team_a`, `score_team_b` FROM `tbl_matches` WHERE `played` = '". $whichGame."';";
+            $sql = "SELECT `id`,`team_id_a`, `team_id_b`, `score_team_a`, `score_team_b` FROM `tbl_matches` WHERE `played` = '". $whichGame."' && `ongoing` = 'F';";
             $resultcount = $dbc->query($sql)->rowCount();
             $result = $dbc->query($sql)->fetchAll();
 

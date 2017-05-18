@@ -17,6 +17,8 @@ include_once (__DIR__."/../DatabaseConnector.php");
  *  request 7 = get extra time
  *
  *  request 8 = uploud extra time
+ *
+ *  request 9 = finish
  * */
 
 if (isset($_POST["request"]) && isset($_POST["id"]))
@@ -175,5 +177,9 @@ if (isset($_POST["request"]) && isset($_POST["id"]))
 
     elseif ($_POST["request"] == 9)
     {
+        $game_id = $_POST["id"];
+
+        $sql = "UPDATE `played`='T',`ongoing`='F' WHERE `id`=".$game_id;
+        $dbc->query($sql);
     }
 }
