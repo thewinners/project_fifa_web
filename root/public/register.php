@@ -19,15 +19,6 @@ if (isset($_SESSION["logged"]))
                 <label for='email'>Email:</label>
                 <input type='email' id='email' name='email' class='textarea' required>
             </div>
-            <div class='group-form'>
-                <label for='password'>Password:</label>
-                <input type='password' id='password' name='password' class='textarea'>
-            </div>
-            <div class='group-form'>
-                <label for='confirmPassword'>Confirm password:</label>
-                <input type='password' id='confirmPassword' name='confirmPassword' class='textarea' required>
-            </div>
-            <div class='group-form'>
                 <label for='studentNumber'>Studentnumber:</label>
                 <input type='text' id='studentNumber' name='studentNumber' class='textarea' required>
             </div>

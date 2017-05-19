@@ -8,11 +8,9 @@ if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
     session_start();
     $username = $_POST["username"];
     $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirmPassword = $_POST["confirmPassword"];
     $studentNumber = $_POST["studentNumber"];
 
-    $sender = new DataSender($username, $email, $password, $confirmPassword, $studentNumber);
+    $sender = new DataSender($username, $email, $studentNumber);
     $message = $sender->Send();
 
     if ($message != false)

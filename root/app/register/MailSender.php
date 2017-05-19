@@ -1,5 +1,5 @@
 <?php
-function SendMail($name, $email, $studentNumber, $password, $hash)
+function SendMail($name, $email, $password, $hash)
 {
     $to = $email; // Send email to our user
     $subject = 'Project Fifa | Verification'; // Give the email a subject
@@ -10,11 +10,10 @@ function SendMail($name, $email, $studentNumber, $password, $hash)
     
     ------------------------\n
     Login email: '.$email.'\n
-    Password: '.$password.'\n
-    Studentnumber: '.$studentNumber.'\n
+    Password: '.$password.'
     ------------------------\n\n
     
-    Please click this link to activate your account:\n
+    Please click this link to activate your account and set your password:\n
     http://www.joostlont.com/public/verify.php?email='.$email.'&hash='.$hash.'
     "; //Email msg
 
