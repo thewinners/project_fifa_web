@@ -77,6 +77,10 @@ label{
 #NoPermission{
     text-align: center;
 }
+.w300
+{
+    width: 350px;
+}
 /*===TITLE'S===*/
 h1,h2,h3,h4,h5,h6,sub
 {

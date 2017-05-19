@@ -45,20 +45,20 @@ else
     </div>
     <div class="column-spaced">
         <ul>
-            <li player-id="-" class="column-spaced"><span>Remove goal </span>players <?php echo $game_result_a[0]['name'];?> <span> Add goal</span></li>
+            <li player-id="-" class="column-spred w300"><span>Remove <br>goal </span>players <?php echo $game_result_a[0]['name'];?> <span> Add goal</span></li>
             <?php
             foreach ($players_team_a as $player)
             {
-                echo "<li player-id=\"".$player['id']."\" class=\"column-spaced\"> <span class=\"minus btn btn-r\"> - </span> ".$player['first_name']." ".$player['last_name']." <span class=\"plus btn btn-g\"> + </span> </li>";
+                echo "<li player-id=\"".$player['id']."\" class=\"column-spred\"> <span class=\"minus btn btn-r\"> - </span> ".$player['first_name']." ".$player['last_name']." <span class=\"plus btn btn-g\"> + </span> </li>";
             }
             ?>
         </ul>
         <ul>
-            <li player-id="4"> <span> Remove Goal </span> players <?php echo $game_result_b[0]['name'];?><span> Add goal </span> </li>
+            <li player-id="4" class="column-spred w300"> <span> Remove <br>Goal </span> players <?php echo $game_result_b[0]['name'];?><span> Add goal </span> </li>
             <?php
             foreach ($players_team_b as $player)
             {
-                echo "<li player-id=\"".$player['id']."\" class=\"column-spaced\"> <span class=\"minus btn btn-r\"> - </span> ".$player['first_name']." ".$player['last_name']." <span class=\"plus btn btn-g\"> + </span> </li>";
+                echo "<li player-id=\"".$player['id']."\" class=\"column-spred w300\"> <span class=\"minus btn btn-r\"> - </span> ".$player['first_name']." ".$player['last_name']." <span class=\"plus btn btn-g\"> + </span> </li>";
             }
             ?>
         </ul>
