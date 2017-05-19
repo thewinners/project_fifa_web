@@ -25,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxManager.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajaxManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/ajax/ajaxManager.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1451">
@@ -47,6 +47,32 @@
                 <marker date="1495099617181" expanded="true" signature="4523:4575" ph="SELECT `exst... tbl_matches" />
                 <marker date="1495099617181" expanded="true" signature="4804:4856" ph="SELECT `exst... tbl_matches" />
                 <marker date="1495099617181" expanded="true" signature="4989:5058" ph="UPDATE `tbl_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ongoing-games.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tamplates/ongoing-games.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1495184457521" expanded="true" signature="125:179" ph="SELECT `id` tbl_matches" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ongoing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/ongoing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <marker date="1495184067727" expanded="true" signature="197:296" ph="..." />
+                <marker date="1495184067727" expanded="true" signature="197:297" ph="..." />
+                <marker date="1495184067727" expanded="true" signature="197:301" ph="..." />
               </folding>
             </state>
           </provider>
@@ -90,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whilegame.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="whilegame.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/whilegame.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="952">
               <caret line="56" column="74" lean-forward="false" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
               <folding>
                 <marker date="1495178511093" expanded="true" signature="346:398" ph="UPDATE `tbl_... " />
@@ -143,6 +169,8 @@
         <option value="$PROJECT_DIR$/app/ajax/ajaxManager.php" />
         <option value="$PROJECT_DIR$/public/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/public/whilegame.php" />
+        <option value="$PROJECT_DIR$/public/ongoing.php" />
+        <option value="$PROJECT_DIR$/public/tamplates/ongoing-games.php" />
       </list>
     </option>
   </component>
@@ -467,12 +495,12 @@
       <workItem from="1494421900054" duration="2076000" />
       <workItem from="1494485948764" duration="7238000" />
       <workItem from="1495093068700" duration="4936000" />
-      <workItem from="1495177452061" duration="2051000" />
+      <workItem from="1495177452061" duration="5140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35471000" />
+    <option name="totallyTimeSpent" value="38560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -508,15 +536,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/addPlayer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/player/PlayerAdder.php" />
     <entry file="file://$PROJECT_DIR$/app/DatabaseConfig.php" />
     <entry file="file://$PROJECT_DIR$/app/teams/TeamManager.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,14 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/startGames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tamplates/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -846,17 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/whilegame.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="56" column="74" lean-forward="false" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
-          <folding>
-            <marker date="1495178511093" expanded="true" signature="346:398" ph="UPDATE `tbl_... " />
-            <marker date="1495178511093" expanded="true" signature="446:562" ph="SELECT `id`,... tbl_matches" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ajax/ajaxManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1451">
@@ -878,6 +878,47 @@
             <marker date="1495099617181" expanded="true" signature="4523:4575" ph="SELECT `exst... tbl_matches" />
             <marker date="1495099617181" expanded="true" signature="4804:4856" ph="SELECT `exst... tbl_matches" />
             <marker date="1495099617181" expanded="true" signature="4989:5058" ph="UPDATE `tbl_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ongoing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1495184067727" expanded="true" signature="197:296" ph="..." />
+            <marker date="1495184067727" expanded="true" signature="197:297" ph="..." />
+            <marker date="1495184067727" expanded="true" signature="197:301" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tamplates/ongoing-games.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1495184457521" expanded="true" signature="125:179" ph="SELECT `id` tbl_matches" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/startGames.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/whilegame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="74" lean-forward="false" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
+          <folding>
+            <marker date="1495178511093" expanded="true" signature="346:398" ph="UPDATE `tbl_... " />
+            <marker date="1495178511093" expanded="true" signature="446:562" ph="SELECT `id`,... tbl_matches" />
           </folding>
         </state>
       </provider>
