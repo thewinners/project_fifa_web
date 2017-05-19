@@ -75,6 +75,3 @@ session_start();
         </div>
     </header>
 </div>
-<?php
-include_once ("javascript/clockphpjs.php");
-?>
