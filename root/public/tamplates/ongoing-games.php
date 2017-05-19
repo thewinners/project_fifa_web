@@ -20,5 +20,16 @@ function ongoing_games(){
 
 function getTheGames()
 {
-
+/*
+ * loop voor alle wetstrijden
+ *
+ * de score
+ *
+ * de tijd
+ *
+ * de extratijd
+ *
+ * wie er gescored heeft en hoelaat
+ *
+ */
 }
