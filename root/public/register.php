@@ -8,9 +8,25 @@ if (isset($_SESSION["logged"]))
         echo
         "<div class='page-title'>
             <h2>Register</h2>
-        </div>
-        <div class='wrapper wrapper_page'>
-        <form action='../app/register/RegisterManager.php' method='post'>
+        </div>";
+
+        echo "<div class='wrapper wrapper_page'>";
+
+        if (isset($_SESSION["reg_error"]))
+        {
+            foreach($_SESSION["reg_error"] as $error)
+            {
+                echo "<p>".$error."</p>";
+                unset($_SESSION["reg_error"]);
+            }
+        }
+        if (isset($_SESSION["reg_succes"]))
+        {
+            echo "<p>".$_SESSION["reg_succes"]."</p>";
+            unset($_SESSION["reg_succes"]);
+        }
+
+        echo "<form action='../app/register/RegisterManager.php' method='post'>
             <div class='group-form'>
                 <label for='username'>Username:</label>
                 <input type='text' id='username' name='username' class='textarea' required>

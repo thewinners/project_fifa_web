@@ -44,14 +44,23 @@ session_start();
                         }
                         echo "<a href='../app/login/LoginManager.php'><li>Logout</li></a>";
                     }
+                    if (isset($_SESSION["error"]))
+                    {
+                        echo "<p>". $_SESSION["error"] . "</p>";
+                        unset($_SESSION["error"]);
+                    }
                 }
                 else
                 {
                     echo "<button onclick=\"openLogin()\">Login</button>";
-
+                    if (isset($_SESSION["error"]))
+                    {
+                        echo "<p>". $_SESSION["error"] . "</p>";
+                        unset($_SESSION["error"]);
+                    }
                     echo "<div id='overlay' class='overlay' onclick=\"closeLogin()\"></div>";
-                    echo "<div id=\"id01\" class=\"modal\">                              
-                                <form class=\"modal-content animate\" action=\"../app/login/LoginManager.php\" method='post'>
+                    echo "<div id=\"id01\" class=\"modal\">";
+                          echo  "<form class=\"modal-content animate\" action=\"../app/login/LoginManager.php\" method='post'>
                                     <div class='logcontainer'>
                                         <span onclick=\"closeLogin()\" class=\"close\" title=\"Close Login\">&times;</span>
 

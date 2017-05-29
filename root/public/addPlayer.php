@@ -28,6 +28,10 @@ require_once ("tamplates/header.php");
             <input type="text" name="last_name" class="textarea" required>
         </div>
         <div class="group-form">
+            <label for="email">email</label>
+            <input type="email" name="email" class="textarea" required>
+        </div>
+        <div class="group-form">
             <label for="student_id">student id</label>
             <input type="text" name="student_id" class="textarea" required>
         </div>
