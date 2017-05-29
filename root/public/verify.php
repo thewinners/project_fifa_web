@@ -1,16 +1,25 @@
 <?php
+ini_set("display_errors", 1);
+
 include_once("tamplates/header.php");
 require_once("../app/register/VerifyChecker.php");
+
 $msg = CheckDetails();
 if (isset($_GET['email']) && !empty($_GET['email']))
 {
     $email = $_GET['email'];
 }
-
+if ($msg == true)
+{
+    $message = "Your account has been activated, please change your password.";
+}
+else
+{
+    $message = "The url is either invalid or you already have activated your account.";
+}
 echo "<div class=\"wrapper wrapper_page\">";
-echo "<h3 class='column-center' id='verify'>".$msg."</h3>";
-
-if ($msg == "Your account has been activated, please change your password.")
+echo "<h3 class='column-center' id='verify'>".$message."</h3>";
+if ($msg == true)
 {
     echo "<form action='../app/register/ChangePassword.php' method='post'>
             <div class='hidden'>
@@ -29,7 +38,6 @@ if ($msg == "Your account has been activated, please change your password.")
             </div>
         </form>";
 }
-
 include_once("tamplates/footer.php");
 echo "</div>";
 ?>

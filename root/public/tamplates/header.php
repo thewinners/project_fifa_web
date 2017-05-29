@@ -77,6 +77,7 @@ session_start();
                                         </div>
                                     </div>       
                                  </form>
+                                 <a href='resetPassword.php'>Reset Password</a>
                           </div>";
                 }
                 ?>

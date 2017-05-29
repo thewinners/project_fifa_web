@@ -38,7 +38,6 @@ class dataSender
             $sql = "INSERT INTO `tbl_users` (`username`, `email`, `password`, `studentnumber`, `hash`) VALUES ('$this->username', '$this->email', '$hashedPassword', '$this->studentNumber', '$hash');";
             $this->dbc->query($sql);
             SendMail($this->username,$this->email,$password,$hash);
-
         }
         return $errorMessage;
     }

@@ -1,6 +1,4 @@
 <?php
-ini_set("display_errors", 1);
-
 include_once ("tamplates/header.php");
 require_once("../app/teams/TeamsManager.php");
 require_once("../app/players/player.php");

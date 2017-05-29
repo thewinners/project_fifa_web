@@ -9,20 +9,20 @@ function checkDetails()
         $email = $_GET['email']; // Set email variable
         $hash = $_GET['hash']; // Set hash variable
 
-        $sql = ("SELECT `email`, `hash`, `active` FROM `tbl_users` WHERE `email`='".$email."' AND `hash`='".$hash."' AND `active`='0'");
+        $sql = "SELECT `email`, `hash`, `active` FROM `tbl_users` WHERE `email`='".$email."' AND `hash`='".$hash."' AND `active` = '0';";
         $match  = \App\Connect()->query($sql)->rowCount();
 
         if($match > 0)
         {
             // We have a match, activate the account
-            $sql = "UPDATE `tbl_users` SET `active` = '1' WHERE `email` = '$email' AND `hash` = '$hash AND active='0''";
+            $sql = "UPDATE `tbl_users` SET `active` = '1' WHERE `email` = '$email' AND `hash` = '$hash' AND active = '0';";
             \App\Connect()->query($sql);
-            return "Your account has been activated, please change your password.";
+            return true;
         }
         else
         {
             // No match -> invalid url or account has already been activated.
-            return "The url is either invalid or you already have activated your account.";
+            return false;
         }
     }
     else
