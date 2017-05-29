@@ -13,14 +13,16 @@ class dataSender
     private $dbc;
     private $studentNumber;
     private $validator;
+    private $admin;
 
-    public function __construct($username, $email, $studentNumber)
+    public function __construct($username, $email, $studentNumber, $admin)
     {
         $this->username = $username;
         $this->email = $email;
         $this->validator = new DataValidator();
         $this->studentNumber = $studentNumber;
         $this->dbc = Connect();
+        $this->admin = $admin;
     }
 
     public function Send()
@@ -35,7 +37,7 @@ class dataSender
             $password = rand(100000,999999); // Generate random number between 1000 and 5000 and assign it to a local variable.
 
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO `tbl_users` (`username`, `email`, `password`, `studentnumber`, `hash`) VALUES ('$this->username', '$this->email', '$hashedPassword', '$this->studentNumber', '$hash');";
+            $sql = "INSERT INTO `tbl_users` (`username`, `email`, `password`, `studentnumber`, `hash`, `admin`) VALUES ('$this->username', '$this->email', '$hashedPassword', '$this->studentNumber', '$hash', $this->admin);";
             $this->dbc->query($sql);
             SendMail($this->username,$this->email,$password,$hash);
         }

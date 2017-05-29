@@ -35,8 +35,20 @@ if (isset($_SESSION["logged"]))
                 <label for='email'>Email:</label>
                 <input type='email' id='email' name='email' class='textarea' required>
             </div>
+            <div class='group-form'>
                 <label for='studentNumber'>Studentnumber:</label>
                 <input type='text' id='studentNumber' name='studentNumber' class='textarea' required>
+            </div>
+            <div class='group-form'>
+                <label for='adminrights'>Admin Rights:</label>
+                <input list=\"browsers\" name=\"adminrights\" id='adminrights'>
+                  <datalist id=\"adminrights\">
+                    <option value=\"Internet Explorer\">
+                    <option value=\"Firefox\">
+                    <option value=\"Chrome\">
+                    <option value=\"Opera\">
+                    <option value=\"Safari\">
+                  </datalist>
             </div>
             <div class='group-form'>
                 <input type='submit' value='Submit' class='button'>

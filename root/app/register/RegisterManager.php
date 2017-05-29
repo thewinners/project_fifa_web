@@ -9,8 +9,8 @@ if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
     $username = $_POST["username"];
     $email = $_POST["email"];
     $studentNumber = $_POST["studentNumber"];
-
-    $sender = new DataSender($username, $email, $studentNumber);
+    $admin = $_POST["admin"];
+    $sender = new DataSender($username, $email, $studentNumber, $admin);
     $message = $sender->Send();
 
     if ($message != false)
