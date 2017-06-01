@@ -18,4 +18,4 @@ else
     $_SESSION["msg"] = "This email is not used.";
 }
 
-header("location= ../../public/resetPassword.php");
+header("location: ../../public/resetPassword.php");

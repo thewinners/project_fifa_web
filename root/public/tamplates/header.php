@@ -36,53 +36,53 @@ session_start();
                 <?php
                 if (isset($_SESSION["logged"]))
                 {
-                    if ($_SESSION["logged"])
-                    {
-                        if ($_SESSION["rights"] == 2)
-                        {
-                            echo "<a href='register.php'><li>Register</li></a>";
-                        }
-                        else if($_SESSION["rights"] == 4)
-                        {
-                            echo "<a href='playerpage.php'><li>My Page</li></a>";
-                        }
-                        echo "<a href='../app/login/LoginManager.php'><li>Logout</li></a>";
-                    }
-                    if (isset($_SESSION["error"]))
-                    {
-                        echo "<p>". $_SESSION["error"] . "</p>";
-                        unset($_SESSION["error"]);
-                    }
+                if ($_SESSION["logged"])
+                {
+                if ($_SESSION["rights"] == 2)
+                {
+                echo "<a href='register.php'><li>Register</li></a>";
+                }
+                else if($_SESSION["rights"] == 4)
+                {
+                echo "<a href='playerpage.php'><li>My Page</li></a>";
+                }
+                echo "<a href='../app/login/LoginManager.php'><li>Logout</li></a>";
+                }
+                if (isset($_SESSION["error"]))
+                {
+                echo "<p>". $_SESSION["error"] . "</p>";
+                unset($_SESSION["error"]);
+                }
                 }
                 else
                 {
-                    echo "<button onclick=\"openLogin()\">Login</button>";
-                    if (isset($_SESSION["error"]))
-                    {
-                        echo "<p>". $_SESSION["error"] . "</p>";
-                        unset($_SESSION["error"]);
-                    }
-                    echo "<div id='overlay' class='overlay' onclick=\"closeLogin()\"></div>";
-                    echo "<div id=\"id01\" class=\"modal\">";
-                          echo  "<form class=\"modal-content animate\" action=\"../app/login/LoginManager.php\" method='post'>
-                                    <div class='logcontainer'>
-                                        <span onclick=\"closeLogin()\" class=\"close\" title=\"Close Login\">&times;</span>
+                echo "<button onclick=\"openLogin()\">Login</button>";
+                if (isset($_SESSION["error"]))
+                {
+                echo "<p>". $_SESSION["error"] . "</p>";
+                unset($_SESSION["error"]);
+                }
+                echo "<div id='overlay' class='overlay' onclick=\"closeLogin()\"></div>";
+                echo "<div id=\"id01\" class=\"modal\">";
+                    echo  "<form class=\"modal-content animate\" action=\"../app/login/LoginManager.php\" method='post'>
+                    <div class='logcontainer'>
+                        <span onclick=\"closeLogin()\" class=\"close\" title=\"Close Login\">&times;</span>
 
-                                        <div class=\"group-form\">
-                                            <label for=\"email\">Email:</label>
-                                            <input type=\"text\" id=\"email\" name=\"email\" class=\"textarea\">
-                                        </div>
-                                        <div class=\"group-form\">
-                                            <label for=\"password\">Password:</label>
-                                            <input type=\"password\" id=\"password\" name=\"password\" class=\"textarea\">
-                                        </div>
-                                        <div class=\"group-form\">
-                                            <input type=\"submit\" value=\"Login\" class=\"button loginSubmit\">
-                                        </div>
-                                    </div>  
-                                    <a href='resetPassword.php'>Reset Password</a>
-                                 </form>
-                          </div>";
+                        <div class=\"group-form\">
+                            <label for=\"email\">Email:</label>
+                            <input type=\"text\" id=\"email\" name=\"email\" class=\"textarea\">
+                        </div>
+                        <div class=\"group-form\">
+                            <label for=\"password\">Password:</label>
+                            <input type=\"password\" id=\"password\" name=\"password\" class=\"textarea\">
+                        </div>
+                        <div class=\"group-form\">
+                            <input type=\"submit\" value=\"Login\" class=\"button loginSubmit\">
+                        </div>
+                    </div>
+                    <a href='resetPassword.php'>Reset Password</a>
+                    </form>
+                </div>";
                 }
                 ?>
             </ul>

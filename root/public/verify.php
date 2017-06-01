@@ -23,7 +23,7 @@ if ($msg == true)
 {
     echo "<form action='../app/register/ChangePassword.php' method='post'>
             <div class='hidden'>
-                <input type='email' id='email' name='email' class='textarea' required>
+                <input type='email' id='email' value='$email' name='email' class='textarea' required>
             </div>
             <div class='group-form'>
                 <label for='password'>Password:</label>

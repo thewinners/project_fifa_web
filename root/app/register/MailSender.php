@@ -20,7 +20,7 @@ function SendMail($name, $email, $password, $hash)
     "; //Email msg
 
     // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70);
+    $msg = wordwrap($msg,100);
 
     $headers = 'From:noreply@joostlont.com' . "\r\n"; // Set from headers
     mail($to, $subject, $msg, $headers); // Send our email

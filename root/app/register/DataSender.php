@@ -9,7 +9,6 @@ class dataSender
 {
     private $username;
     private $email;
-    private $password;
     private $dbc;
     private $studentNumber;
     private $validator;
