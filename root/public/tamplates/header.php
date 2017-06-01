@@ -42,6 +42,10 @@ session_start();
                         {
                             echo "<a href='register.php'><li>Register</li></a>";
                         }
+                        else if($_SESSION["rights"] == 4)
+                        {
+                            echo "<a href='playerpage.php'><li>My Page</li></a>";
+                        }
                         echo "<a href='../app/login/LoginManager.php'><li>Logout</li></a>";
                     }
                     if (isset($_SESSION["error"]))
@@ -75,9 +79,9 @@ session_start();
                                         <div class=\"group-form\">
                                             <input type=\"submit\" value=\"Login\" class=\"button loginSubmit\">
                                         </div>
-                                    </div>       
+                                    </div>  
+                                    <a href='resetPassword.php'>Reset Password</a>
                                  </form>
-                                 <a href='resetPassword.php'>Reset Password</a>
                           </div>";
                 }
                 ?>

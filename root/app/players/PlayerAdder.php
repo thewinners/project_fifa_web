@@ -9,8 +9,7 @@ if (isset($_POST['student_id']) && isset($_POST['first_name']) && $_POST['last_n
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO `tbl_players` (`student_id`, `first_name`, `last_name`, `email`) 
-    VALUES ('$student_id', '$first_name','$last_name', '$email')";
+    $sql = "INSERT INTO `tbl_players` (`student_id`, `first_name`, `last_name`, `email`) VALUES ('$student_id', '$first_name','$last_name', '$email')";
     $dbc = \App\Connect();
     $dbc->query($sql);
 

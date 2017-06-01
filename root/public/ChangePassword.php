@@ -21,11 +21,11 @@ echo "<div class=\"wrapper wrapper_page\">";
                     <input type='email' id='email' name='email' value='$email' class='textarea' required>
                 </div>
                 <div class='group-form'>
-                    <label for='password'>Password:</label>
+                    <label for='password'>New Password:</label>
                     <input type='password' id='password' name='password' class='textarea' required>
                 </div>
                 <div class='group-form'>
-                    <label for='confirmPassword'>Confirm Password:</label>
+                    <label for='confirmPassword'>Confirm New Password:</label>
                     <input type='password' id='confirmPassword' name='confirmPassword' class='textarea' required>
                 </div>
                 <div class='group-form'>

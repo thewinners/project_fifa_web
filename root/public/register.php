@@ -41,7 +41,7 @@ if (isset($_SESSION["logged"]))
             </div>
             <div class='group-form'>
                 <label for='adminrights'>Admin Rights:</label>
-                <input list=\"browsers\" name=\"adminrights\" id='adminrights'>
+                <input list=\"adminrights\" name=\"adminrights\" id='adminrights'>
                   <datalist id=\"adminrights\">
                     <option value=\"Internet Explorer\">
                     <option value=\"Firefox\">

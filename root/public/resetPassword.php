@@ -3,11 +3,6 @@ include_once("tamplates/header.php");
 
 echo "<div class=\"wrapper wrapper_page\">";
 
-//if (isset($_SESSION['msg']))
-//{
-//    echo "<h3>".$_SESSION['msg']."</h3>";
-//    unset($_SESSION['msg']);
-//}
     echo "<form action='../app/login/PasswordReset.php' method='post'>
             <div class='group-form'>
                 <label for='email'>Email:</label>

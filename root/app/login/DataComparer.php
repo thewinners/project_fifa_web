@@ -2,6 +2,7 @@
 namespace App;
 
 require_once("../DatabaseConnector.php");
+require_once (__DIR__."/../players/fetchPlayer.php");
 
 class DataComparer
 {
@@ -34,6 +35,11 @@ class DataComparer
                 $_SESSION["rights"] = $user["admin"];
                 $_SESSION["user_id"] = $user["id"];
                 $_SESSION["team_rights"] = $user["teamrights"];
+                if ($user["admin"] == 4)
+                {
+                    $playerDetails = fetchPlayerSN($user["studentnumber"]);
+                    $_SESSION["playerId"] = $playerDetails[0]["student_id"];
+                }
             }
             else
             {
