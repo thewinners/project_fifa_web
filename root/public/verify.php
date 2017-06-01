@@ -1,6 +1,4 @@
 <?php
-ini_set("display_errors", 1);
-
 include_once("tamplates/header.php");
 require_once("../app/register/VerifyChecker.php");
 
