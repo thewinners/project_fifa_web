@@ -2,6 +2,7 @@
     include_once ("tamplates/header.php");
     require_once ("../app/session/CheckRights.php");
     require_once ("../app/matches/matchesManager.php");
+    require_once ("../app/pools/PoulGenerator.php");
 ?>
 <div class="page-title">
     <h2>Matches</h2>
@@ -9,10 +10,17 @@
 <div class="wrapper wrapper_page">
     <div class="navbar footer column-spaced">
         <ul class="column-spred">
-            <a href="ladder.php"><li>Ladder</li></a>
-            <a href="#planed"><li>Planned games</li></a>
-            <a href="#played"><li>Played games</li></a>
-            <a href=""><li>Ongoing games</li></a>
+            <?php
+            if(!\app\PoolsMade())
+            {
+                if ($_SESSION["rights"] == 2){
+                    echo "<a href='../app/pools/magicButton.php'>Generate</a>";
+                }
+            }
+            ?>
+            <li><a href="ladder.php">Ladder</a></li>
+            <li><a href="#planed">Planned games</a></li>
+            <li><a href="#played">Played games</a></li>
             <?php
             if (isset($_SESSION["logged"]))
             {
@@ -26,7 +34,7 @@
     </div>
     <h3 id="planed" class="column-center">Planned games</h3>
     <?php
-    $response = \app\getMatches("F", false);
+    $response = \app\getMatches("F", true);
     if ($response != null)
     {
         echo "<p>".$response."</p>";

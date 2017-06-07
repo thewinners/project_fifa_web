@@ -10,16 +10,16 @@ require_once("../app/players/player.php");
     <h2>Players</h2>
 </div>
 <div class="wrapper wrapper_page">
-        <?php
-            echo players();
-        ?>
+    <?php
+    if (isset($_SESSION["logged"]))
+    {
+        echo "<a href='addPlayer.php' class='button'>Add Player</a>";
+    }
+
+        echo players();
+    ?>
     <div class="group-form">
-        <?php
-        if (isset($_SESSION["logged"]))
-        {
-            echo "<a href='addPlayer.php' class='button'>Add Player</a>";
-        }
-        ?>
+
     </div>
     <?php
     require_once ("tamplates/footer.php");

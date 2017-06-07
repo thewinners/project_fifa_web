@@ -17,7 +17,7 @@ function getMatches($whichGame, $start)
 
         if ($total != 0)
         {
-            $sql = "SELECT `id`,`team_id_a`, `team_id_b`, `score_team_a`, `score_team_b` FROM `tbl_matches` WHERE `played` = '". $whichGame."' && `ongoing` = 'F';";
+            $sql = "SELECT `id`,`team_id_a`, `team_id_b`, `score_team_a`, `score_team_b` FROM `tbl_matches` WHERE `played` = '". $whichGame."';";
             $resultcount = $dbc->query($sql)->rowCount();
             $result = $dbc->query($sql)->fetchAll();
 
@@ -83,5 +83,16 @@ function printMatches($matches, $whichGame, $start)
                 echo "<div class='column-spred'><p class='teamA'>".$team_a[0]['name']."</p><p class='score'>".$match["score_team_a"]."-".$match["score_team_a"]."</p><p class='teamB'>".$team_b[0]['name']."</p></div>";
             }
         }
+    }
+
+    function PoolsMade(){
+
+        $sql = "SELECT * FROM `tbl_matches`";
+        $total = Connect()->query($sql)->rowCount();
+
+        if($total > 0){
+            return true;
+        }
+        return false;
     }
 }
