@@ -60,39 +60,33 @@ function printMatches($matches, $whichGame, $start)
             }
         }
     }
-    else
-    {
+    else {
         echo "<div class='column-spred'><p class='teamA'>Team A</p><p class='score'>score</p><p class='teamB'>Team B</p></div>";
-        if ($whichGame == "F")
-        {
-            foreach ($matches as $match)
-            {
+        if ($whichGame == "F") {
+            foreach ($matches as $match) {
                 $team_a = fetchTeam($match["team_id_a"]);
                 $team_b = fetchTeam($match["team_id_b"]);
 
-                echo "<div class='column-spred'><p class='teamA'>".$team_a[0]['name']."</p><p class='score'>?-?</p><p class='teamB'>".$team_b[0]['name']."</p></div>";
+                echo "<div class='column-spred'><p class='teamA'>" . $team_a[0]['name'] . "</p><p class='score'>?-?</p><p class='teamB'>" . $team_b[0]['name'] . "</p></div>";
             }
-        }
-        elseif ($whichGame == "T")
-        {
-            foreach ($matches as $match)
-            {
+        } elseif ($whichGame == "T") {
+            foreach ($matches as $match) {
                 $team_a = fetchTeam($match["team_id_a"]);
                 $team_b = fetchTeam($match["team_id_b"]);
 
-                echo "<div class='column-spred'><p class='teamA'>".$team_a[0]['name']."</p><p class='score'>".$match["score_team_a"]."-".$match["score_team_a"]."</p><p class='teamB'>".$team_b[0]['name']."</p></div>";
+                echo "<div class='column-spred'><p class='teamA'>" . $team_a[0]['name'] . "</p><p class='score'>" . $match["score_team_a"] . "-" . $match["score_team_a"] . "</p><p class='teamB'>" . $team_b[0]['name'] . "</p></div>";
             }
         }
     }
+}
 
-    function PoolsMade(){
+function PoolsMade(){
 
-        $sql = "SELECT * FROM `tbl_matches`";
-        $total = Connect()->query($sql)->rowCount();
+    $sql = "SELECT * FROM `tbl_matches`";
+    $total = Connect()->query($sql)->rowCount();
 
-        if($total > 0){
-            return true;
-        }
-        return false;
+    if($total > 0){
+        return true;
     }
+    return false;
 }

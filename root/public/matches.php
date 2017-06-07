@@ -11,10 +11,14 @@
     <div class="navbar footer column-spaced">
         <ul class="column-spred">
             <?php
-            if(!\app\PoolsMade())
+            if(\app\PoolsMade() == false)
             {
-                if ($_SESSION["rights"] == 2){
-                    echo "<a href='../app/pools/magicButton.php'>Generate</a>";
+                if (isset($_SESSION["logged"]))
+                {
+                    if ($_SESSION["rights"] == 2)
+                    {
+                        echo "<li><a href='../app/pools/magicButton.php'>Generate</a></li>";
+                    }
                 }
             }
             ?>
@@ -34,7 +38,7 @@
     </div>
     <h3 id="planed" class="column-center">Planned games</h3>
     <?php
-    $response = \app\getMatches("F", true);
+    $response = \app\getMatches("F", false);
     if ($response != null)
     {
         echo "<p>".$response."</p>";

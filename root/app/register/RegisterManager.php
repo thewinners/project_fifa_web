@@ -1,6 +1,5 @@
 <?php
 namespace App;
-
 require_once("DataSender.php");
 
 if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
@@ -9,7 +8,8 @@ if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
     $username = $_POST["username"];
     $email = $_POST["email"];
     $studentNumber = $_POST["studentNumber"];
-    $admin = $_POST["admin"];
+    $admin = $_POST["adminrights"];
+
     $sender = new DataSender($username, $email, $studentNumber, $admin);
     $message = $sender->Send();
 

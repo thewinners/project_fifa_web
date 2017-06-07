@@ -17,8 +17,8 @@ if (isset($_SESSION["logged"]))
             foreach($_SESSION["reg_error"] as $error)
             {
                 echo "<p>".$error."</p>";
-                unset($_SESSION["reg_error"]);
             }
+            unset($_SESSION["reg_error"]);
         }
         if (isset($_SESSION["reg_succes"]))
         {
@@ -41,13 +41,11 @@ if (isset($_SESSION["logged"]))
             </div>
             <div class='group-form'>
                 <label for='adminrights'>Admin Rights:</label>
-                <input list=\"adminrights\" name=\"adminrights\" id='adminrights'>
-                  <datalist id=\"adminrights\">
-                    <option value=\"Internet Explorer\">
-                    <option value=\"Firefox\">
-                    <option value=\"Chrome\">
-                    <option value=\"Opera\">
-                    <option value=\"Safari\">
+                <input list=\"datalist\" name=\"adminrights\" id='adminrights'>
+                  <datalist id=\"datalist\">
+                    <option value=\"1\">
+                    <option value=\"2\">
+                    <option value=\"3\">
                   </datalist>
             </div>
             <div class='group-form'>
