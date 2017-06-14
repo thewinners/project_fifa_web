@@ -19,3 +19,11 @@ function fetchTeam($idTeam)
 
     return $team;
 }
+function fetchTeam2($idTeam)
+{
+    $dbc = Connect();
+    $sql = "SELECT `name` FROM `tbl_teams` WHERE `id` = '$idTeam'";
+    $team = $dbc->query($sql)->fetchAll(\PDO::FETCH_ASSOC);
+
+    return $team[0]['name'];
+}

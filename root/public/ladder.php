@@ -49,7 +49,7 @@ $pointsTotal = 0;
         $show = \App\showLadder();
         $games = \App\fillLadder();
 
-        if ($show == true)
+        if ($show == false && $games != 0 )
         {
             echo "
             <div class=\"ladder column-center\">
@@ -68,20 +68,20 @@ $pointsTotal = 0;
             </div>
         </div>
         <div class=\"final\">
-            <div class=\"l5 block2 row-alignmentend\"></div>
-            <div class=\"l6 block2 row-alignment-start\"></div>
+            <div class=\"l5 block2 row-alignment-end\"><p>".$games['game5']['team1']."</p></div>
+            <div class=\"l6 block2 row-alignment-start\"><p>".$games['game5']['team2']."</p></div>
         </div>
         <div class=\"final\">
             <div class=\"mid7 block\"></div>
             <div class=\"mid8 block  column-center\">
                 <h1>Finals</h1>
             </div>
-            <div class=\"mid9 block row-alignment-end\"></div>
-            <div class=\"mid10 block row-alignment-start\"></div>
+            <div class=\"mid9 block row-alignment-end\"><p>".$games['game7']['team1']."</p></div>
+            <div class=\"mid10 block row-alignment-start\"><p>".$games['game7']['team2']."</p></div>
         </div>
         <div class=\"final\">
-            <div class=\"r5 block2 row-alignment-end\"></div>
-            <div class=\"r6 block2 row-alignment-start\"></div>
+            <div class=\"r5 block2 row-alignment-end\"><p>".$games['game6']['team1']."</p></div>
+            <div class=\"r6 block2 row-alignment-start\"><p>".$games['game6']['team2']."</p></div>
         </div>
         <div class=\"final\">
             <div class=\"r1 block row-alignment-end\">

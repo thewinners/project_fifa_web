@@ -185,5 +185,5 @@ function endGame() {
     });
 }
 function goBack() {
-    window.location.replace("http://www.google.com");
+    window.location.replace("http://joostlont.com/project_fifa/public/index.php");
 }
