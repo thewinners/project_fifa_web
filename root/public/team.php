@@ -31,7 +31,6 @@ if (isset($_GET["id"]))
         {
             if (isset($_SESSION["logged"]))
             {
-
                 echo "<form action='../app/teams/AddTeamPlayer.php' method='post'>
                     <div class='group-form'>
                         <label for='studentNumber'>Studentnumber:</label>

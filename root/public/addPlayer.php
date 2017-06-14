@@ -1,23 +1,17 @@
 <?php
+session_start();
 require_once ("tamplates/header.php");
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
 <div class="page-title">
     <h2>Add player</h2>
 </div>
 <div class="wrapper wrapper_page">
+    <?php
+        if(isset($_SESSION["player_error"])){
+            echo $_SESSION["player_error"];
+            unset($_SESSION["player_error"]);
+        }
+    ?>
     <form action="../app/players/PlayerAdder.php" method="POST">
         <div class="group-form">
             <label for="first_name">firstname</label>
